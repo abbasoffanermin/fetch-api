@@ -11,14 +11,13 @@
 //---------------------------------------------------------------------------------------
 
 // const callApi1= async()=>{
-//   const response = await fetch('https://simple-grocery-store-api.glitch.me/products');
-//   const data=await response.json()
-//   .then(data => {
-//     console.log(data)
-//   })
-//   .catch(error => {
-//     console.log(error)
-//   })
+//  const response = await fetch('https://simple-grocery-store-api.glitch.me/products');
+
+//  console.log(response.body);
+//  console.log(response.headers);
+
+// const data=await response.json()
+// console.log(data);
 // }
 // callApi1();
 
@@ -30,28 +29,27 @@
 // .catch(error=>console.log(error))
 
 //-----------------------------------------------------------------------------
-// const callApi2=async()=>{
-//   const response = await fetch('https://simple-grocery-store-api.glitch.me/carts');
-//   const data=await response.json()
-//   .then(data => {
-//     console.log(data)
-//   })
+// const calApi2=async ()=>{
+//     const response=await fetch('https://simple-grocery-store-api.glitch.me/carts')
+//     console.log(response.headers);
+//     console.log(response.body);
+//     const data=await response.json()
 // }
-// callApi2()
 
-
+// calApi2()
 
 //3-->https://simple-grocery-store-api.glitch.me/orders
 // fetch('https://simple-grocery-store-api.glitch.me/orders')
 // .then(response=>response.json())
 // .then(data=>console.log(data))
 
-// const calApi3=async ()=>{
+// const callApi3=async ()=>{
 //   const response=await fetch('https://simple-grocery-store-api.glitch.me/orders')
+//   console.log(response.headers);
+//   console.log(response.body);
 //   const data=await response.json()
-//   .then(data=>console.log(data))
+//   console.log(data)
 // }
-// calApi3()
 
 
 
@@ -64,8 +62,10 @@
 
 // const calApi4=async ()=>{
 //   const response=await fetch('http://www.boredapi.com/api/activity/')
+// console.log(response.headers);
+// console.log(response.body);
 //   const data=await response.json()
-//   .then(data=>console.log(data))
+//   
 // }
 // calApi4()
 
@@ -78,8 +78,10 @@
 
 // const callApi5=async ()=>{
 //   const response=await fetch('https://api.thecatapi.com/v1/images/0XYvRd7oD')
+// console.log(response.headers);
+// console.log(response.body);
 //   const data=await response.json()
-//   .then(data=>console.log(data))
+//   
 // }
 // callApi5()
 
@@ -92,8 +94,10 @@
 
 // const callApi6=async ()=>{
 //   const response=await fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+// console.log(response.headers);
+// console.log(response.body);
 //   const data=await response.json()
-//   .then(data=>console.log(data))
+ 
 // }
 // callApi6()
 
@@ -106,8 +110,10 @@
 
 // const callApi7=async ()=>{
 //   const response=await fetch('https://api.nasa.gov/planetary/apod')
+// console.log(response.headers);
+// console.log(response.body);
 //   const data=await response.json()
-//   .then(data=>console.log(data))
+//  
 // }
 // callApi7()
 
@@ -119,8 +125,10 @@
 
 // const callApi8=async ()=>{
 //   const response=await fetch('https://fakestoreapi.com/products')
+// console.log(response.headers);
+// console.log(response.body);
 //   const data=await response.json()
-//   .then(data=>console.log(data))
+//  
 // }
 // callApi8()
 //9-->https://fakestoreapi.com/carts
@@ -133,7 +141,8 @@
 // const callApi9=async ()=>{
 //   const response=await fetch('https://fakestoreapi.com/carts')
 //   const data=await response.json()
-//   .then(data=>console.log(data))
+//    console.log(response.headers);
+//   console.log(response.body);
 // }
 // callApi9()
 
@@ -147,6 +156,37 @@
 // const callApi10=async ()=>{
 //   const response=await fetch('https://fakestoreapi.com/users')
 //   const data=await response.json()
-//   .then(data=>console.log(data))
+//    console.log(response.headers);
+//   console.log(response.body);
 // }
 // callApi10()
+
+
+// query and params
+const callApi11=async ()=>{
+  const response=await fetch('https://fakestoreapi.com/products?limit=5')
+  const data=await response.json()
+ .then(data => {
+    console.log(data);
+ })
+ .catch(error => {
+    console.log('error');
+ })
+   console.log(response.headers);
+  console.log(response.body);
+}
+callApi11()
+
+
+const callApi12=async ()=>{
+  const response=await fetch('https://fakestoreapi.com/products/1')
+  const data=await response.json()
+ .then(data => {
+    console.log(data);
+ })
+ .catch(error => {
+    console.log('error');
+ })
+   console.log(response.headers);
+  console.log(response.body);
+}
